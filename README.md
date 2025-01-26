@@ -27,84 +27,350 @@ To begin head over to Lazagne's GitHub. I'll leave all of the links down below f
 <img src="https://snipboard.io/YetNvg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+<img src="https://snipboard.io/1TpHid.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-  So let's go ahead and search up "Windows security", and I'll go ahead and select the "Virus and threat protection". Click on "Manage settings", disable "Real-time protection".
-  
+<img src="https://snipboard.io/g1snE7.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+  So let's go ahead and search up "Windows security", and I'll go ahead and select the "Virus and threat protection". Click on "Manage settings", and disable "Real-time protection".
+<br />
+<br />
+<img src="https://snipboard.io/dzch21.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/yHijUL.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now if I take a look at the downloads it says lazagne was blocked as unsafe by Microsoft Defender. Whenever you see this, what we can do is click on the three dots and click on "Keep". It will say, "This app is unsafe". Now click "Keep anyways".
-  
+<br />
+<br />
+<img src="https://snipboard.io/B3YQgd.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/6jnxCV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now what we can do is take a look at the downloads and let's open up a Powershell. So I'll hold shift and right-click and click on "Open Powershell window here". Just to make sure it works, I'll just type in "Lazagne", and it works awesome.
-  
+<br />
+<br />
+<img src="https://snipboard.io/12eXBw.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/P4D7hS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Because I ran this, LimaCharlie should also pick up the process for Lazagne. So let's head over to LimaCharlie and take a look. So let's head over to "Sensors List" and click on our SOAR sensor.
-  
+<br />
+<br />
+<img src="https://snipboard.io/tiwDky.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   From here scroll down, we want to select "Timeline". Now we executed this not even a minute ago so it should be somewhere here, or what we can do is type in "Lazagne". Taking a look at the earliest event, we do see it at '20:52' generating an event of "NEW_DOCUMENT".
-  
+<br />
+<br />
+<img src="https://snipboard.io/Ndc47Z.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/MGh19a.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   We do see the path as "C:\Users\Administrator\Downloads". We have a hash and the process ID as well, but what we're interested in the most is the new process event. So click on that, and on the right, we get all of this juicy information. It's all pretty good information to have to start generating our detection rule.
-  
+<br />
+<br />
+<img src="https://snipboard.io/60nDyY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/pQ3wYG.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/HCjhSn.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So how do we do this? Well first and foremost, let's go ahead and open up a new tab for LimaCharlie and I'll head over to our organization and from here we want to select "Automation" and "DNR rules". On the top right we do have a new rule that we can use. So I'll click on "New Rule", and if this is your first time building a rule this might look pretty intimidating, but don't worry I'll show you a hack that you can use going forward.
-  
+<br />
+<br />
+<img src="https://snipboard.io/GsruTK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/r13gCA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/baT9sM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/cy6ZHB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now we don't need to build a rule from scratch. I mean there's a lot of different formats and all that stuff so what we can do instead is, go back and let's just search up a rule that is similar to ours. We know that Lazagne is a credential access tool, so I'll type in "Credential" and hey look at that, we have some the credential stuff. Let's take a look at all the available ones here.
-  
+<br />
+<br />
+<img src="https://snipboard.io/21kMI3.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   What we're most interested in is the process creation. Now you might say, "How do you know that?" Well if we go back over to the events, take a look at the event type. It is set to "NEW_PROCESS", so these are all process creations.
-  
+<br />
+<br />
+<img src="https://snipboard.io/1jViCp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/i8ygTm.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So if I head back over to the DNR rules, we do see a Windows process creation. So let's go ahead and click on that, and at the bottom we do see view the content of this rule in the GitHub repository. So I'll click on that. 
-  
+<br />
+<br />
+<img src="https://snipboard.io/T4pqgc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/FNQoRx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   There you go, here's the rule right here. So what we can do is go ahead and click on "Raw" and copy this. Head back into our rule and click on the pencil icon. Now we can go ahead and paste in what we just copied. Now if you take a look at the top, we do see a detect and we do see a respond. So this essentially signifies the two blocks here.
-  
+<br />
+<br />
+<img src="https://snipboard.io/cexIWJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/5UR7vX.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/8yfIEB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+Now we can go ahead and paste in what we just copied. Now if you take a look at the top, we do see a detect and we do see a respond. So this essentially signifies the two blocks here.
+<br />
+<br />
+<img src="https://snipboard.io/jJHk0V.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/oqLZep.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Starting from respond. I'll just select all of this and cut it, and then I'll paste it inside the respond block. Now we don't actually need the respond here, so I'll just go ahead and remove it. Remember that respond is just telling us that, "Hey this is the response portion". Similar to detect, we don't need it so we'll remove it and expand this. There you go.
-  
+<br />
+<br />
+<img src="https://snipboard.io/x2Rosq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/OXWUlI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/nJghmG.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Starting from the beginning we do see events with "NEW_PROCESS" and "EXISTING_PROCESS". So what does that mean? Well, let's head back over to our Lazagne events. What we want to do is select "Event Collection", and from here its just simply grabbing these event types. So if I search up "process", we see "EXISTING_PROCESS" and if we scroll down we also see "NEW_PROCESS" as well.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So this section is essentially saying this detection will only trigger if the event is under the new process or existing process event type. Now we get our first operator of "and". So what does that mean? Well, it means the event type must be either new process or existing process "and". The "and" is specified by this operator.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   To get a list of operators, they actually provide some right here. So "Op Reference", there's "and/or", "is", "exists", "contains", "starts with", "ends with", "it greater than", and just many others. So I'll go back over to expand, and again the operator being used here is "and". Currently, this is what it's doing in plain english.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So let's remove this and then let's continue on. "rules" is going to be the criteria, so meaning you must follow these rules. The operator is Windows, case sensitive is false, and "ends with". So it's using two different operators, "is" and "ends with". Where the "path" is "event/FILE_PATH", and you might be like, "Where did they get that?"
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Well, heading back over to our sensor. Let's go back to our timeline and search for our Lazagne process. So we're clicking on the "NEW_PROCESS" because we're interested in the new or existing process. So I'll click on that and we do see a "FILE_PATH" here. Going back over to the "Detection and Response Rule", we see the "event/FILE_PATH". 
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So the "event" has a nested field of "FILE_PATH", so that is why we have "event/FILE_PATH". For example, let's just say I am interested in the hash. Then what will I do? Well, I'll type in "event/HASH", just like this, but I'll keep it back as "FILE_PAH".
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Where the "value" ends in "\DeviceCredentialDeployment.exe". Let's bring this back as plain English here, so what the heck does this mean? Well, essentially it is the event type and must be either "NEW_PROCESS" or "EXISTING_PROCESS", and must be a Windows machine. We can ignore case sensitivity; the file path must end with "DeviceCredentialDeployment.exe".
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now if we wanted to detect our process of Lazagne, we can simply replace "DeviceCredentialDeployment" with Lazagne, and in theory, that should technically work. So let's go ahead and do that. I'll remove "DeviceCredentialDeployment" and I'll say "Lazagne".
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now if we take a look at our events, we can see that the "FILE_PATH" ends with "LaZagne" here, but notice how the "z" is capitalized. That is why we have the case sensitive as "false". So regardless, even if our value has a lowercase "z" or a capital Z, we should still be okay.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So I'll keep this as that, but let's go ahead and add some more options because if you recall, let me head back over to my server. Take a look at the flags that are available for LaZagne. We have "all", "browsers", "chat", "databases", "games", "git", "mails", "maven", and a lot of others. So let's just type, "all".
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Look at that, we got some passwords here. Now what we can do is head back over to the LimaCharlie. I'll save this for now. Let's refresh this and we'll wait a bit until the process is generated. So after a couple of seconds, we do get our new process that occurred. I'll click on this one here. I'll just zoom out just a bit since it's a lot easier to see it like this.
-  
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So taking a look at our file path, we do see "LaZagna.exe" at the end. Take a look at the command line, we do see an "all" this time. If we look at the previous process for the command line, we just see it as "LaZagna.exe". We don't see any command line arguments associated with it.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now let's add on our detection rule to include this command line argument. The new rule that I want to create is that the event type must be either "NEW_PROCESS" or "EXISTING_PROCESS", and it must be Windows. The "file_path" should end with "LaZagne.exe", or the command line should end with "all", "lasagna", or "hash == LaZagne's hash.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now I do foresee some false positives for the command line that ends with "all". For example, we have "ipconfig /all", that's going to trigger that. However, for this demo let's just keep it as it is. So how do we build this out? Currently, we have this section good to go because we have the "NEW_PROCESS", the "EXISTING_PROCESS", and it is Windows.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So what do we do? How do we create the other ones? Well, we must include an operation of "or" and then I'll press tab on my keyboard. So our new rules is going to be living under this particular "or".
-  
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   So these rules will be "case sensitive: false" because I don't want any of that. So I'll type "op: ends with" under the case sensitive. Then, I'll type "path: event/FILE_PATH" under the operator. Second to last, I'll type "value: lazagne.exe" under the path. Awesome, so we satisfied these criteria.
-  
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Now we have to take a look at the command line, but before I do that, let's go back and align our operator with our case sensitive. Perfect.
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   The way you can tell, it's kind of hard to see, but I'll just try and draw it out here. There's a line right there. So this line will tell you what your fields are under, if that makes sense. Adding to that, I want all of my stuff to be under the "case sensitive".
-  
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />  
  For the second one, I'm going to type "- case sensitive: false", and just like before I'll type "op: ends with" under the "case sensitive. Finally, I'll type "path: event/COMAND_LINE" under the operator.
- 
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
  Why is it the command line? Well, let's go back over to our "Processes". We'll see the "COMMAND_LINE" being used as a field and we're interested in particularly this command line argument of "all". So that's why we see an ends with "COMMAND_LINE" and the value is going to be "all". 
- 
- 
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
  So that means that this one is now good. Let me start erasing some of these so it's a lot easier to see. There you go that looks pretty good.
- 
- 
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
  What's next? "COMMAND_LINE" contains LaZagne, okay let's do that. So I'll type "case sensitive: false", then press tab on my keyboard. Afterwards, I'll type "op: contains" under the "case sensitive". Then, I'll type "path: event/COMMAND_LINE" under the operator. Finally, I'll type "value: \LaZagne.exe" under the "path".
- 
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   The last we're going to do is our hash, so let's do that now. We don't need this anymore, which is the previous rule that we modified, so I'll just remove that. 
-  
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   I'll just keep on building on this one here. So I'll type in "case sensitive: false" and I'll type in "op: is". The reason why it says "is", is because I want this to be equal to.
   
   Then, I'll type in "path: event/HASH" and "value: " with the hash right underneath it. So essentially that is now our rule. The event type must be either "NEW_PROCESS" or "EXISTING_PROCESS" and must be windows. 
