@@ -371,13 +371,16 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
 <br />
 <br />
 <br />
-  Now I do foresee some false positives for the command line "that ends with all". For example, we have "ipconfig /all", which will trigger that. However, for this demo let's just keep it as it is. So how do we build this out? Currently, we have this section good to go because we have the "NEW_PROCESS", the "EXISTING_PROCESS", and it is Windows.
+  Now I do foresee some false positives for the command line "that ends with all". For example, we have "ipconfig /all", which will trigger that. However, for this demo let's just keep it as it is. So how do we build this out? Currently, we have this section good to go because we have the "NEW_PROCESS", the "EXISTING_PROCESS", and we have "is windows".
 <br />
 <br />
 <img src="https://snipboard.io/fpqkBc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="https://snipboard.io/lHENQ1.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/xEnT5L.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
