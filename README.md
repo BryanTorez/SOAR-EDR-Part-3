@@ -173,7 +173,7 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
 <br />
 <br />
 <br />
-  Starting from respond. I'll just select all of this and cut it, and then I'll paste it inside the respond block. Now we don't actually need the respond here, so I'll just go ahead and remove it. Remember that respond is just telling us that, "Hey this is the response portion". Similar to detect, we don't need it so we'll remove it and expand this. There you go.
+  Starting from respond. I'll just select all of this and cut it, and then I'll paste it inside the respond block. Now we don't actually need the respond here, so I'll just go ahead and remove it.
 <br />
 <br />
 <img src="https://snipboard.io/x2Rosq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -187,10 +187,30 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
 <br />
 <br />
 <br />
+Remember that response is just telling us that, "Hey this is the response portion". Similar to detect, we don't need it so we'll remove it and expand this. There you go.
+<br />
+<br />
+<img src="https://snipboard.io/UGmVe9.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/FG3KRn.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/dMyrbA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Starting from the beginning we do see events with "NEW_PROCESS" and "EXISTING_PROCESS". So what does that mean? Well, let's head back over to our Lazagne events. What we want to do is select "Event Collection", and from here its just simply grabbing these event types. So if I search up "process", we see "EXISTING_PROCESS" and if we scroll down we also see "NEW_PROCESS" as well.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/elKPky.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/s8edA5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/WzOmon.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -198,7 +218,13 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   So this section is essentially saying this detection will only trigger if the event is under the new process or existing process event type. Now we get our first operator of "and". So what does that mean? Well, it means the event type must be either new process or existing process "and". The "and" is specified by this operator.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/I1qOEc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/EcipnO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/PDyz3m.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -206,7 +232,13 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   To get a list of operators, they actually provide some right here. So "Op Reference", there's "and/or", "is", "exists", "contains", "starts with", "ends with", "it greater than", and just many others. So I'll go back over to expand, and again the operator being used here is "and". Currently, this is what it's doing in plain english.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SLEdnT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/wHtUEQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/6IMTVA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -214,7 +246,7 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   So let's remove this and then let's continue on. "rules" is going to be the criteria, so meaning you must follow these rules. The operator is Windows, case sensitive is false, and "ends with". So it's using two different operators, "is" and "ends with". Where the "path" is "event/FILE_PATH", and you might be like, "Where did they get that?"
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ETwD2v.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -222,15 +254,33 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   Well, heading back over to our sensor. Let's go back to our timeline and search for our Lazagne process. So we're clicking on the "NEW_PROCESS" because we're interested in the new or existing process. So I'll click on that and we do see a "FILE_PATH" here. Going back over to the "Detection and Response Rule", we see the "event/FILE_PATH". 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/gHp5sU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/IGunxE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/YUDJOw.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/C8ePuI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-  So the "event" has a nested field of "FILE_PATH", so that is why we have "event/FILE_PATH". For example, let's just say I am interested in the hash. Then what will I do? Well, I'll type in "event/HASH", just like this, but I'll keep it back as "FILE_PAH".
+  So the "event" has a nested field of "FILE_PATH", so that is why we have "event/FILE_PATH". For example, let's just say I am interested in the hash. Then what will I do? Well, I'll type in "event/HASH", just like this, but I'll keep it back as "FILE_PATH".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/j7btDu.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/Qq8s5A.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/C8XEcJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/AfvDOp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -238,7 +288,10 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   Where the "value" ends in "\DeviceCredentialDeployment.exe". Let's bring this back as plain English here, so what the heck does this mean? Well, essentially it is the event type and must be either "NEW_PROCESS" or "EXISTING_PROCESS", and must be a Windows machine. We can ignore case sensitivity; the file path must end with "DeviceCredentialDeployment.exe".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/b2iLXJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/knYdz0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -246,7 +299,10 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   Now if we wanted to detect our process of Lazagne, we can simply replace "DeviceCredentialDeployment" with Lazagne, and in theory, that should technically work. So let's go ahead and do that. I'll remove "DeviceCredentialDeployment" and I'll say "Lazagne".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/khCQAZ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/hIlsu4.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -254,23 +310,38 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   Now if we take a look at our events, we can see that the "FILE_PATH" ends with "LaZagne" here, but notice how the "z" is capitalized. That is why we have the case sensitive as "false". So regardless, even if our value has a lowercase "z" or a capital Z, we should still be okay.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/h5oLRS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/ipjoBG.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-  So I'll keep this as that, but let's go ahead and add some more options because if you recall, let me head back over to my server. Take a look at the flags that are available for LaZagne. We have "all", "browsers", "chat", "databases", "games", "git", "mails", "maven", and a lot of others. So let's just type, "all".
+  So I'll keep this as that, but let's go ahead and add some more options because if you recall, let me head back over to my server. Take a look at the flags that are available for LaZagne. We have "all", "browsers", "chat", "databases", "games", "git", "mails", "maven", and a lot of others. So let's just type, "all". Look at that, we got some passwords here.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Pnlwkz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/rVYtcp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/ghK9c6.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-  Look at that, we got some passwords here. Now what we can do is head back over to the LimaCharlie. I'll save this for now. Let's refresh this and we'll wait a bit until the process is generated. So after a couple of seconds, we do get our new process that occurred. I'll click on this one here. I'll just zoom out just a bit since it's a lot easier to see it like this.
+Now what we can do is head back over to the LimaCharlie. I'll save this for now. Let's refresh this and we'll wait a bit until the process is generated. So after a couple of seconds, we do get our new process that occurred. I'll click on this one here.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/1KvB2G.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/U15aXz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/UJoq4Q.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -278,7 +349,13 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   So taking a look at our file path, we do see "LaZagna.exe" at the end. Take a look at the command line, we do see an "all" this time. If we look at the previous process for the command line, we just see it as "LaZagna.exe". We don't see any command line arguments associated with it.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nlpctT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/NgVp3b.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/T02cbx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -286,15 +363,21 @@ Now we can go ahead and paste in what we just copied. Now if you take a look at 
   Now let's add on our detection rule to include this command line argument. The new rule that I want to create is that the event type must be either "NEW_PROCESS" or "EXISTING_PROCESS", and it must be Windows. The "file_path" should end with "LaZagne.exe", or the command line should end with "all", "lasagna", or "hash == LaZagne's hash.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/GrtIAn.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/1Yifgy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-  Now I do foresee some false positives for the command line that ends with "all". For example, we have "ipconfig /all", that's going to trigger that. However, for this demo let's just keep it as it is. So how do we build this out? Currently, we have this section good to go because we have the "NEW_PROCESS", the "EXISTING_PROCESS", and it is Windows.
+  Now I do foresee some false positives for the command line "that ends with all". For example, we have "ipconfig /all", which will trigger that. However, for this demo let's just keep it as it is. So how do we build this out? Currently, we have this section good to go because we have the "NEW_PROCESS", the "EXISTING_PROCESS", and it is Windows.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fpqkBc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/lHENQ1.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
