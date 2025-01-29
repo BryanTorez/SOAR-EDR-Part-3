@@ -388,7 +388,13 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
   So what do we do? How do we create the other ones? Well, we must include an operation of "or" and then I'll press tab on my keyboard. So our new rules is going to be living under this particular "or".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kARsi5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/JUfYDi.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/twUQTD.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -396,7 +402,16 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
   So these rules will be "case sensitive: false" because I don't want any of that. So I'll type "op: ends with" under the case sensitive. Then, I'll type "path: event/FILE_PATH" under the operator. Second to last, I'll type "value: lazagne.exe" under the path. Awesome, so we satisfied these criteria.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/gNI5Ow.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/Gayfiw.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/D9nW3T.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/awdemt.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -404,15 +419,21 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
   Now we have to take a look at the command line, but before I do that, let's go back and align our operator with our case sensitive. Perfect.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/zZxaS0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/6rqEVh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-  The way you can tell, it's kind of hard to see, but I'll just try and draw it out here. There's a line right there. So this line will tell you what your fields are under, if that makes sense. Adding to that, I want all of my stuff to be under the "case sensitive".
+  The way you can tell, it's kind of hard to see, but I'll just try and draw it out here. There's a line right there. So this line will tell you what your fields are under if that makes sense. Adding to that, I want all of my stuff to be under the "case sensitive".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/o2VIAN.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/qgUKxf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -420,7 +441,10 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
  For the second one, I'm going to type "- case sensitive: false", and just like before I'll type "op: ends with" under the "case sensitive. Finally, I'll type "path: event/COMAND_LINE" under the operator.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/xYf9vT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/P2H9Ly.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -428,7 +452,13 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
  Why is it the command line? Well, let's go back over to our "Processes". We'll see the "COMMAND_LINE" being used as a field and we're interested in particularly this command line argument of "all". So that's why we see an ends with "COMMAND_LINE" and the value is going to be "all". 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/x4obUs.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/aUKWwq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/EMrz0u.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -436,15 +466,24 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
  So that means that this one is now good. Let me start erasing some of these so it's a lot easier to see. There you go that looks pretty good.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/XdEtoF.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
- What's next? "COMMAND_LINE" contains LaZagne, okay let's do that. So I'll type "case sensitive: false", then press tab on my keyboard. Afterwards, I'll type "op: contains" under the "case sensitive". Then, I'll type "path: event/COMMAND_LINE" under the operator. Finally, I'll type "value: \LaZagne.exe" under the "path".
+ What's next? "COMMAND_LINE" contains LaZagne, okay let's do that. So I'll type "case sensitive: false", then press tab on my keyboard. Afterwards, I'll type "op: contains" under the "case sensitive". Then, I'll type "path: event/COMMAND_LINE" under the operator. Finally, I'll type "value: lazagne" under the "path".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/RD23iE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/k8ZhtI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/Y5Lwhe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/Y5Lwhe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
