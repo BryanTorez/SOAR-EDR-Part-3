@@ -650,62 +650,71 @@ Well, click on "Target Event" to copy the entire event. Then, we need to paste i
 <img src="https://snipboard.io/BfXVHq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nFOmYi.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/CUjHKr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/spKFc6.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Just to quickly pause and recap what I just did, I didn't build the rule from scratch. Initially, I used an existing rule in GitHub and I just built on that. If you're starting out, or in fact, even if you're advanced, you should take a look at an existing Rule and then modify that to fit your use case.
+Just to quickly pause and recap what I just did, I didn't build the rule from scratch. Initially, I used an existing rule in GitHub and I just built on that. If you're starting out, or in fact, even if you're advanced, you should take a look at an existing Rule and then modify that to fit your use case. In my opinion, it's a lot easier to follow and alter an existing rule then start from scratch because by following an existing rule, you can follow its format and take a look at what field names that they're using. So again highly recommend you take a look at the GitHub, look at existing rules, copy it, and then alter it to fit your use case.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/pabU6W.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<br />
-<br />
-In my opinion, it's a lot easier to follow and alter an existing rule then start from scratch because by following an existing rule, you can follow its format and take a look at what field names that they're using.
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nGbCQJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So again highly recommend you take a look at the GitHub, look at existing rules, copy it, and then alter it to fit your use case. Now, all we really need to do is start generating this. So I'm going to actually go back to the homepage here by clicking on the home icon.
+Now, all we need to do is start generating this. So I'm going to go back to the homepage here by clicking on the home icon.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/baD6WJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Go into the organization and let's select "Detections". So we have a lot of detections here and I'll delete them all.  Now that we have a clean slate, I'll head back over to my server and let's clear out the screen. Let's go ahead and run ".\LaZagne.exe all".
+Go into the organization and let's select "Detections". So we have a lot of detections here and I'll delete them all. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/dNsi3Q.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/QcSKxm.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/fLETXY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/mu2Oy3.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
+Now that we have a clean slate, I'll head back over to my server and let's clear out the screen. Let's go ahead and run ".\LaZagne.exe all".
+<br />
+<br />
+<img src="https://snipboard.io/j1DSIv.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/vmxfBz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />  
 In theory, our detection should catch this. So if we go over to our LimaCharlie, theres no detections yet. After refreshing the detections, we do see a couple detections here. At the very bottom, we have the "MyDFIR - HackTool - Lazagne", so that is pretty awesome.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/D8JvS9.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/2VbvxD.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -713,23 +722,15 @@ In theory, our detection should catch this. So if we go over to our LimaCharlie,
 I'll go ahead and click on that and here's our event. We have our "COMMAND_LINE", "LasZgne", "all", we have the file path, we got the hash, we have our host name, the external IP address, and we also have our "link".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/6cjerU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/jLs82C.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<br />
-<br />
-So what I'm doing here is taking a look at the available fields within this detection, so then I can use it in the Playbook or story when we build it in time. Before I forget, I'll copy this rule and you can find it in the description down below. That way if you have some problems with your formatting, you can go ahead and just copy mine.
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Nkd9WR.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-I hope that everything went smoothly for you. Creating a detection rule in LimaCharlie can be a little bit confusing, especially if you have never created a rule, but just like anything else, the more times you do it, the better you'll become at it. LimaCharlie has amazing documentation that you can reference anytime you get stuck. In part four, we'll begin to set out Slack and Tines for automation. That is it for this part and I hope to see you in part four. Remember to stay curious and do things differently.
+So what I'm doing here is taking a look at the available fields within this detection, so then I can use it in the Playbook or story when we build it in time. Before I forget, I'll copy this rule and you can find it in the description down below. That way if you have some problems with your formatting, you can go ahead and just copy mine. I hope that everything went smoothly for you. Creating a detection rule in LimaCharlie can be a little bit confusing, especially if you have never created a rule, but just like anything else, the more times you do it, the better you'll become at it. LimaCharlie has amazing documentation that you can reference anytime you get stuck. In part four, we'll begin to set out Slack and Tines for automation. That is it for this part and I hope to see you in part four. Remember to stay curious and do things differently.
