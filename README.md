@@ -474,16 +474,16 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
  What's next? "COMMAND_LINE" contains LaZagne, okay let's do that. So I'll type "case sensitive: false", then press tab on my keyboard. Afterwards, I'll type "op: contains" under the "case sensitive". Then, I'll type "path: event/COMMAND_LINE" under the operator. Finally, I'll type "value: lazagne" under the "path".
 <br />
 <br />
-<img src="https://snipboard.io/RD23iE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/C7IY36.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://snipboard.io/k8ZhtI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/3PB4s8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://snipboard.io/Y5Lwhe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Z9qumx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://snipboard.io/Y5Lwhe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/5O7SM9.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -491,45 +491,225 @@ Now what we can do is head back over to the LimaCharlie. I'll save this for now.
   The last we're going to do is our hash, so let's do that now. We don't need this anymore, which is the previous rule that we modified, so I'll just remove that. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/J7IVEz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/KPyeur.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
   I'll just keep on building on this one here. So I'll type in "case sensitive: false" and I'll type in "op: is". The reason why it says "is", is because I want this to be equal to.
-  
+<br />
+<br />
+<img src="https://snipboard.io/mTCEkJ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/JQ6y4R.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   Then, I'll type in "path: event/HASH" and "value: " with the hash right underneath it. So essentially that is now our rule. The event type must be either "NEW_PROCESS" or "EXISTING_PROCESS" and must be windows. 
-  
+<br />
+<br />
+<img src="https://snipboard.io/EZy7cK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/iCbxrg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/UYEpdy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
   If we take a look here, the "file_path" must end with "lazagne.exe". Then, the "command_line" must end with all. So if we take a look at our second one, we have the operator as "ends with".
-  
-Where the command line is set to "all". Then, we have "command_line" contains "lazagne.exe". Looking at the third one, we see our case sensitive as "false". Operator is "contains". The path is "COMMAND_LINE" and the value is "lasagne".
-
+<br />
+<br />
+<img src="https://snipboard.io/Z9jpx2.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/0ueq6V.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/NIPOQy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+Where the command line is set to "all". Then, we have "command_line" contains "lazagne.exe". Looking at the third one, we see our case sensitive as "false". Operator is "contains". The path is "COMMAND_LINE" and the value is "lazagne".
+<br />
+<br />
+<img src="https://snipboard.io/FuEbLy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/ydjFLP.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/HdKqni.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 Finally, we have "hash == lasagna hash". So we take a look at the case sensitive, that is "false". The operator is now "is" because we want this to be equal to. The path is "event/HASH" and the value is the hash of the lazagne file. So it has four criteria to meet within this one particular "or" operator.
-
+<br />
+<br />
+<img src="https://snipboard.io/85K6kC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/SwO456.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/azRc73.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 Again, there's a big line right here that signifies that this particular "or", is using the rules to meet its criteria. So I'll go ahead and remove everything else at the bottom. Now let's go ahead and click on "Restore". Finally, we can move on to the "Respond" block. 
-
+<br />
+<br />
+<img src="https://snipboard.io/XSNCub.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/cKEemy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/F0uWln.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 So the "action" is currently set to "report". If you want a list of actions, you can look at their documentation. Essentially, what "report" does is if a certain event meets this criterion for this detection, it will then generate a detection under the following "Detection" tab, and that is what we want.
-
+<br />
+<br />
+<img src="https://snipboard.io/a0W1R7.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 So we want this as a "report". For the metadata, I'm going to have it as "author" and let's just say "mydfir". For "Description", I'll say "Detects LaZagne (SOAR-EDR Tool)". For "falsepositives", I'll say "To the Moon". For "level", "medium" is fine.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 For "references", I don't have a reference so I'll remove that. For "tags", I'll say "attack.credential_access". I'm going to remove "t128". For the "name", I'll say "MyDFIR - HackTool - LaZagne (SOAR-EDR). I think this looks pretty good.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 So let's go ahead and save the rule. I'm going to call this as "MyDFIR-Lazagne-SOAR-EDR". I'm going to save this out and our new rule is created. So what I love about LimaCharlie is that it can test your rule. How do you test it?
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 Well, click on "Target Event" to copy the entire event. Then, we need to paste it in to test it. From here, scroll down and click on "Test Event" . Look at that, four operations were evaluated with the following results as true. All green, looking good.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 Just to quickly pause and recap what I just did, I didn't build the rule from scratch. Initially, I used an existing rule in GitHub and I just built on that. If you're starting out, or in fact, even if you're advanced, you should take a look at an existing Rule and then modify that to fit your use case.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 In my opinion, it's a lot easier to follow and alter an existing rule then start from scratch because by following an existing rule, you can follow its format and take a look at what field names that they're using.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 So again highly recommend you take a look at the GitHub, look at existing rules, copy it, and then alter it to fit your use case. Now, all we really need to do is start generating this. So I'm going to actually go back to the homepage here by clicking on the home icon.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 Go into the organization and let's select "Detections". So we have a lot of detections here and I'll delete them all.  Now that we have a clean slate, I'll head back over to my server and let's clear out the screen. Let's go ahead and run ".\LaZagne.exe all".
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 In theory, our detection should catch this. So if we go over to our LimaCharlie, theres no detections yet. After refreshing the detections, we do see a couple detections here. At the very bottom, we have the "MyDFIR - HackTool - Lazagne", so that is pretty awesome.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 I'll go ahead and click on that and here's our event. We have our "COMMAND_LINE", "LasZgne", "all", we have the file path, we got the hash, we have our host name, the external IP address, and we also have our "link".
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 So what I'm doing here is taking a look at the available fields within this detection, so then I can use it in the Playbook or story when we build it in time. Before I forget, I'll copy this rule and you can find it in the description down below. That way if you have some problems with your formatting, you can go ahead and just copy mine.
-
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
 I hope that everything went smoothly for you. Creating a detection rule in LimaCharlie can be a little bit confusing, especially if you have never created a rule, but just like anything else, the more times you do it, the better you'll become at it. LimaCharlie has amazing documentation that you can reference anytime you get stuck. In part four, we'll begin to set out Slack and Tines for automation. That is it for this part and I hope to see you in part four. Remember to stay curious and do things differently.
