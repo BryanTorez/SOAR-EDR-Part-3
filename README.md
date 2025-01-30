@@ -586,29 +586,49 @@ So the "action" is currently set to "report". If you want a list of actions, you
 <img src="https://snipboard.io/a0W1R7.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fdy324.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So we want this as a "report". For the metadata, I'm going to have it as "author" and let's just say "mydfir". For "Description", I'll say "Detects LaZagne (SOAR-EDR Tool)". For "falsepositives", I'll say "To the Moon". For "level", "medium" is fine.
+So we want this as a "report". For the metadata, I'm going to have it as "author" and let's just say "mydfir". For "Description", I'll say "Detects LaZagne (SOAR-EDR Tool)".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/7EZRd1.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/2WXhLd.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/U4jlZx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-For "references", I don't have a reference so I'll remove that. For "tags", I'll say "attack.credential_access". I'm going to remove "t128". For the "name", I'll say "MyDFIR - HackTool - LaZagne (SOAR-EDR). I think this looks pretty good.
+For "falsepositives", I'll say "To the Moon". For "level", "medium" is fine. For "references", I don't have a reference so I'll remove that.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/asEqH0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Q30a14.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/37raxQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/9qtCpA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+For "tags", I'll say "attack.credential_access". I'm going to remove the technique ID "attack.t128". For the "name", I'll say "MyDFIR - HackTool - LaZagne (SOAR-EDR). I think this looks pretty good.
+<br />
+<br />
+<img src="https://snipboard.io/M9mVpn.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/LZ8tGI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -616,10 +636,10 @@ For "references", I don't have a reference so I'll remove that. For "tags", I'll
 So let's go ahead and save the rule. I'm going to call this as "MyDFIR-Lazagne-SOAR-EDR". I'm going to save this out and our new rule is created. So what I love about LimaCharlie is that it can test your rule. How do you test it?
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/dI1LJz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Qq5nxV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -627,7 +647,7 @@ So let's go ahead and save the rule. I'm going to call this as "MyDFIR-Lazagne-S
 Well, click on "Target Event" to copy the entire event. Then, we need to paste it in to test it. From here, scroll down and click on "Test Event" . Look at that, four operations were evaluated with the following results as true. All green, looking good.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/BfXVHq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
